@@ -2,15 +2,27 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon Info</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Search for a Pokémon</h1>
-  <form id="Search">
-    <input type="text" id="pokemonName" placeholder="Enter Pokémon name or ID" required>
-    <button type="submit">Search</button>
-  </form>
-  <div id="pokemonInfo">Enter a Pokémon name or ID above and press "Search".</div>
-  <script src="script.js"></script>
+<body class="min-h-screen flex items-center justify-center bg-[#F1F1F1]">
+  <div class="w-full max-w-md p-4">
+      <div class="bg-[#DEDEDE] rounded-lg shadow-lg p-6">
+          <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold text-[#c50000]">Pokémon Search</h3>
+          </div>
+          <form id="Search" class="space-y-4">
+              <div>
+                  <label for="pokemonName" class="block mb-2 text-sm font-medium text-[#c50000]">Pokémon Name or ID</label>
+                  <input type="text" id="pokemonName" placeholder="ID(1009) or Name('Walking-Wake')" class="w-full bg-[#F1F1F1] border border-[#c50000] text-[#c50000] text-sm rounded-lg focus:ring-[#e70000] focus:border-[#e70000] p-2.5" required />
+              </div>
+              <button type="submit" class="w-full text-white bg-[#e70000] hover:bg-[#c50000] focus:ring-4 focus:outline-none focus:ring-[#e70000] font-medium rounded-lg text-sm px-5 py-2.5">
+                Search
+              </button>
+          </form>
+          <div id="pokemonInfo" class="mt-6 text-[#c50000]"></div>
+      </div>
+  </div>
+ <script src="script.js"></script>
 </body>
 </html>
 
